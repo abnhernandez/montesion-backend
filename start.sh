@@ -6,7 +6,7 @@ if [ -f .env ]; then
 fi
 
 # Usar el puerto proporcionado por Render o 8000 por defecto
-PORT=${PORT:-4000}
+PORT=${PORT:-10000}
 
 # En producción, no usar --reload
 if [ "$NODE_ENV" = "production" ] || [ "$RENDER" = "true" ]; then
