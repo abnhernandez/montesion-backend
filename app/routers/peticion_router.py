@@ -7,7 +7,7 @@ from email.message import EmailMessage
 
 from app.schemas.peticion_schema import PeticionIn, PeticionOut
 from app.models.peticion import Peticion
-from app.database import SessionLocal
+from app.db import SessionLocal
 
 router = APIRouter()
 
