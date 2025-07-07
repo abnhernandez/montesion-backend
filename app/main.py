@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import os
-port = os.getenv("PORT", 4000)
 
 from app.routers import auth_router, peticion_router
 
