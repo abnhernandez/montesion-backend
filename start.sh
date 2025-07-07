@@ -5,8 +5,11 @@ if [ -f .env ]; then
     export $(grep -v '^#' .env | xargs)
 fi
 
-# Usar el puerto proporcionado por Render o 8000 por defecto
-PORT=${PORT:-10000}
+# Validar que $PORT esté definido (obligatorio en Render)
+if [ -z "$PORT" ]; then
+    echo "ERROR: La variable de entorno \$PORT no está definida."
+    exit 1
+fi
 
 # En producción, no usar --reload
 if [ "$NODE_ENV" = "production" ] || [ "$RENDER" = "true" ]; then
