@@ -152,6 +152,7 @@ Monte Sion – Santa María Atzompa
         raise HTTPException(status_code=500, detail="Error enviando correo")
 
     return {"mensaje": "Nueva contraseña enviada al correo electrónico registrado."}
+
 # ----------- Actualizar Usuario -----------
 @router.put("/update", response_model=UserOut)
 def update_user(data: UserUpdate, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
@@ -172,7 +173,8 @@ def update_user(data: UserUpdate, db: Session = Depends(get_db), current_user: U
     db.refresh(current_user)
     return current_user
 
-    @router.delete("/delete", status_code=status.HTTP_204_NO_CONTENT)
+# ----------- Eliminar Cuenta -----------
+@router.delete("/delete", status_code=status.HTTP_204_NO_CONTENT)
 def delete_account(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     try:
         db.delete(current_user)

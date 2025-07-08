@@ -1,7 +1,7 @@
+# schemas/peticion_schema.py
 from pydantic import BaseModel, EmailStr, validator
 
 class PeticionIn(BaseModel):
-    ticket: int
     nombre: str
     correo_electronico: EmailStr
     asunto: str
@@ -17,12 +17,6 @@ class PeticionIn(BaseModel):
     def min_length_10(cls, v):
         if len(v.strip()) < 10:
             raise ValueError("mínimo 10 caracteres")
-        return v
-
-    @validator("ticket")
-    def positive_ticket(cls, v):
-        if v <= 0:
-            raise ValueError("El ticket debe ser un número positivo")
         return v
 
 class PeticionOut(BaseModel):

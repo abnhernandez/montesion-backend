@@ -1,3 +1,4 @@
+# schemas/user_schema.py
 from pydantic import BaseModel, EmailStr
 from typing import Optional
 from datetime import date
@@ -15,10 +16,13 @@ class UserOut(BaseModel):
     correo_electronico: EmailStr
     is_active: bool
 
-    class PasswordResetRequest(BaseModel):
+    class Config:
+        from_attributes = True
+
+class PasswordResetRequest(BaseModel):
     correo_electronico: EmailStr
 
-    class UserUpdate(BaseModel):
+class UserUpdate(BaseModel):
     nombre: Optional[str] = None
     apellido: Optional[str] = None
     correo_electronico: Optional[EmailStr] = None
@@ -26,12 +30,5 @@ class UserOut(BaseModel):
     descripcion: Optional[str] = None
     cumpleaños: Optional[date] = None
 
-    class UserDeleteRequest(BaseModel):
+class UserDeleteRequest(BaseModel):
     password: str
-
-    class Config:
-        from_attributes = True
-
-class Token(BaseModel):
-    access_token: str
-    token_type: str

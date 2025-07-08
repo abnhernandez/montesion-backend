@@ -62,12 +62,12 @@ Si tienes dudas, escríbenos a {remitente}
 
 @router.post("/", response_model=PeticionOut)
 def crear_peticion(peticion: PeticionIn, db: Session = Depends(get_db)):
-    # Validar ticket único
-    if db.query(Peticion).filter(Peticion.ticket == peticion.ticket).first():
-        raise HTTPException(status_code=400, detail="El ticket ya existe")
+    # Generar ticket único: máximo ticket actual + 1, o 1 si no hay ninguno
+    ultimo_ticket = db.query(Peticion).order_by(Peticion.ticket.desc()).first()
+    nuevo_ticket = 1 if not ultimo_ticket else ultimo_ticket.ticket + 1
 
     nueva_peticion = Peticion(
-        ticket=peticion.ticket,
+        ticket=nuevo_ticket,
         nombre=peticion.nombre.strip(),
         correo_electronico=peticion.correo_electronico.strip(),
         asunto=peticion.asunto.strip(),
@@ -89,7 +89,6 @@ def crear_peticion(peticion: PeticionIn, db: Session = Depends(get_db)):
         ticket=nueva_peticion.ticket
     )
     if not enviado:
-        # Log, pero no detiene la petición guardada
         logging.warning("No se pudo enviar correo a %s", nueva_peticion.correo_electronico)
 
     return nueva_peticion
