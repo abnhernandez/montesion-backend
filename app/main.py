@@ -6,7 +6,11 @@ from app.routers import auth_router, peticion_router
 
 app = FastAPI(title="Monte Sion API")
 
-origins = ["https://montesion.me"]
+origins = [
+    "https://montesion.me",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000"
+]
 
 app.add_middleware(
     CORSMiddleware,
