@@ -2,7 +2,7 @@
 
 ## Descripción
 
-API backend desarrollada en FastAPI por **Abner** como proyecto para el **Bootcamp de Backend con Python de Código Facilito**. La aplicación está diseñada para proporcionar servicios de autenticación de usuarios y gestión de peticiones de oración, con la intención de ser utilizada en un futuro por la Iglesia Cristiana Monte Sion Oaxaca.
+API backend de Python desarrollada con FastAPI, como proyecto para el Bootcamp de Backend con Python de Código Facilito. La aplicación está diseñada para proporcionar servicios de autenticación de usuarios y gestión de peticiones de oración, con la intención de ser utilizada en un futuro por la Iglesia Cristiana Monte Sion Oaxaca.
 
 ## Características Principales
 
