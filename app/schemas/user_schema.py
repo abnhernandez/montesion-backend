@@ -32,3 +32,7 @@ class UserUpdate(BaseModel):
 
 class UserDeleteRequest(BaseModel):
     password: str
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
