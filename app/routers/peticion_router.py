@@ -93,3 +93,9 @@ def crear_peticion(peticion: PeticionIn, db: Session = Depends(get_db)):
         logging.warning("No se pudo enviar correo a %s", nueva_peticion.correo_electronico)
 
     return nueva_peticion
+
+@router.get("/")
+def mensaje_biblico():
+    return {
+        "mensaje": "SANTIAGO 5:16 RVR1960\n\nConfesaos vuestras ofensas unos a otros, y orad unos por otros, para que seáis sanados. La oración eficaz del justo puede mucho."
+    }
