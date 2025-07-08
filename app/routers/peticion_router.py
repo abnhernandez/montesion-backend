@@ -97,5 +97,5 @@ def crear_peticion(peticion: PeticionIn, db: Session = Depends(get_db)):
 @router.get("/")
 def mensaje_biblico():
     return {
-        "mensaje": "SANTIAGO 5:16 RVR1960\n\nConfesaos vuestras ofensas unos a otros, y orad unos por otros, para que seáis sanados. La oración eficaz del justo puede mucho."
+        "mensaje": "Confesaos vuestras ofensas unos a otros, y orad unos por otros, para que seáis sanados. La oración eficaz del justo puede mucho. · Santiago 5:16 RVR1960"
     }
