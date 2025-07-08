@@ -419,4 +419,4 @@ pip install black flake8 mypy
 
 **Documentación establecida el**: 7 de Julio, 2025  
 **Versión de la API**: 1.0.0  
-**Mantenido por**: Abner Daniel Hernández Ruiz | Estudiante en Código Facilito.
+**Proyecto creado y mantenido por**: Abner Daniel Hernández Ruiz | Estudiante en Código Facilito.
