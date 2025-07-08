@@ -355,7 +355,7 @@ pip install -r requirements.txt
 ```
 DATABASE_URL=postgresql://... (Auto-generada)
 JWT_SECRET=generated-secret-key
-EMAIL_REMITENTE=iglesia@gmail.com  
+EMAIL_REMITENTE=noreply@iglesiaexample.com  
 EMAIL_PASSWORD=app-password
 PORT=10000 (Auto-asignado)
 RENDER=true (Auto-configurada)
