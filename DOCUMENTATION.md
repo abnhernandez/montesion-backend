@@ -2,7 +2,7 @@
 
 ## Resumen Ejecutivo
 
-La API de Monte Sion es un sistema backend desarrollado para la Iglesia Cristiana Monte Sion de Santa María Atzompa, Oaxaca. Proporciona servicios de autenticación de usuarios y gestión de peticiones de oración con notificaciones automáticas por correo electrónico.
+La API de Monte Sion es un sistema backend desarrollado para el proyecto final del Bootcamp Backend con Python en Código Facilito y se tiene la intención de en un futuro utilizar esta API de manera mas profesional para Iglesia Cristiana Monte Sion Oaxaca. Proporciona servicios de autenticación de usuarios y gestión de peticiones de oración con notificaciones automáticas por correo electrónico.
 
 ## Arquitectura del Sistema
 
