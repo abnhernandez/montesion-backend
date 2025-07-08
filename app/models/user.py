@@ -11,5 +11,5 @@ class User(Base):
     hashed_password = Column(String, nullable=False)
     telefono = Column(String, nullable=True)
     descripcion = Column(String, nullable=True)
-    cumpleanos = Column(Date, nullable=True)
+    cumpleaños = Column(Date, nullable=True)
     is_active = Column(Boolean, default=True)
