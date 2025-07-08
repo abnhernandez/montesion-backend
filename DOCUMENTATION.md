@@ -417,6 +417,6 @@ pip install black flake8 mypy
 
 ---
 
-**Documentación generada el**: 7 de Julio, 2025  
+**Documentación establecida el**: 7 de Julio, 2025  
 **Versión de la API**: 1.0.0  
-**Mantenida por**: Equipo de Desarrollo Monte Sion
+**Mantenida por**: Abner Daniel Hernández Ruiz | Estudiante en Código Facilito.
